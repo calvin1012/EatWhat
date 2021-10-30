@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EatWhat.Page.Login.NewUserPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <Label Style="{StaticResource HeaderLabel}" Text="Sign up" />
+
+            <Entry Placeholder="Name" Text="{Binding Username}" />
+
+            <Entry Placeholder="Email" Text="{Binding Email}" />
+
+            <Entry
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password}" />
+
+            <Button
+                Command="{Binding SignUpCommand}"
+                Style="{StaticResource PrimaryButton}"
+                Text="Sign Up" />
+
+            <Button
+                Command="{Binding SignUpCommand}"
+                Style="{StaticResource SecondaryButton}"
+                Text="Already have an account ? sign-in" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="EatWhat.Shell.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:home="clr-namespace:EatWhat.Page.Home"
+    xmlns:local="clr-namespace:EatWhat.Shell"
+    xmlns:login="clr-namespace:EatWhat.Page.Login">
+    <Shell.FlyoutHeader>
+        <local:FlyoutHeader />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Home">
+        <ShellContent ContentTemplate="{DataTemplate home:HomePage}" />
+    </FlyoutItem>
+
+    <MenuItem Command="{Binding SignOutCommand}" Text="Sign Out" />
+
+    <ShellContent ContentTemplate="{DataTemplate home:HomePage}" Route="HomePage" />
+
+    <ShellContent
+        ContentTemplate="{DataTemplate login:LoginPage}"
+        Route="LoginPage"
+        Shell.FlyoutBehavior="Disabled" />
+
+    <ShellContent
+        ContentTemplate="{DataTemplate login:NewUserPage}"
+        Route="NewUserPage"
+        Shell.FlyoutBehavior="Disabled" />
+
+    <ShellContent
+        ContentTemplate="{DataTemplate login:ForgotPasswordPage}"
+        Route="ForgotPasswordPage"
+        Shell.FlyoutBehavior="Disabled" />
+</Shell>

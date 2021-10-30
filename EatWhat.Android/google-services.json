@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "511851110658",
+    "firebase_url": "https://eatwhat-ae1b9-default-rtdb.firebaseio.com",
+    "project_id": "eatwhat-ae1b9",
+    "storage_bucket": "eatwhat-ae1b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511851110658:android:f8d28c304b69bd3a63221b",
+        "android_client_info": {
+          "package_name": "com.companyname.eatwhat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511851110658-e3hbd59u6icfdbnvaj8vo023jvnukjur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJFZEPtV6WAyN6ZAWL0vdmJM2XtJMKQ5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511851110658-e3hbd59u6icfdbnvaj8vo023jvnukjur.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "511851110658-5lojkp8bb6mqqvrdp42tv5su679qnlii.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.companyname.EatWhat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
