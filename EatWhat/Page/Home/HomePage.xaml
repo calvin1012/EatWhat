@@ -7,34 +7,60 @@
 
         <Grid BackgroundColor="SkyBlue">
             <Grid.RowDefinitions>
-                <RowDefinition Height="280"/>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="200" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="160"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Image Margin="30,10,30,0" 
-                   Grid.Row="0"
-                   Source="https://img.ixintu.com/download/jpg/20200726/e3fd335d05f959d96b09397d76309185_512_512.jpg!bg"
-                   />
-            <Label Grid.Column="1" 
-                Text="Chan Tai Man" Padding="20,90,0,0" FontSize = "20" TextColor="Black"/>
-            <Label Grid.Column="1" 
-                   Text="Hong Kong" Padding="20,120,0,0" FontSize = "15" TextColor="Black"/>
+            <Image
+                Grid.Row="1"
+                Margin="30,10,30,0"
+                Source="https://img.ixintu.com/download/jpg/20200726/e3fd335d05f959d96b09397d76309185_512_512.jpg!bg" />
+            <Image
+                Grid.Column="2"
+                Margin="0,10,10,0"
+                HorizontalOptions="End"
+                Source="https://cdn4.iconfinder.com/data/icons/forgen-phone-settings/48/setting-512.png" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Padding="20,70,0,0"
+                FontSize="20"
+                Text="Chan Tai Man"
+                TextColor="Black" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Padding="20,100,0,0"
+                FontSize="15"
+                Text="Hong Kong"
+                TextColor="Black" />
 
         </Grid>
         <Frame>
-            <Label Text="Set location on map" HorizontalOptions="Fill" Margin="20,0,0,0" IsTabStop="False" TextColor="#000000" VerticalOptions="End" >
+            <Label
+                Margin="20,0,0,0"
+                HorizontalOptions="Fill"
+                IsTabStop="False"
+                Text="Get your location by selection"
+                TextColor="#000000"
+                VerticalOptions="End">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnTapGestureRecognizerTapped" />
                 </Label.GestureRecognizers>
             </Label>
         </Frame>
         <Frame>
-            <Label Text="Set location by GPS" HorizontalOptions="Fill" Margin="20,0,0,0" IsTabStop="False" TextColor="Black" VerticalOptions="End">
+            <Label
+                Margin="20,0,0,0"
+                HorizontalOptions="Fill"
+                IsTabStop="False"
+                Text="Get your location by GPS">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnTapGestureRecognizerTapped" />
                 </Label.GestureRecognizers>
             </Label>
         </Frame>
