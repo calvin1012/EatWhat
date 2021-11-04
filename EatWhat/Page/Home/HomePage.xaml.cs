@@ -18,5 +18,10 @@ namespace EatWhat.Page.Home
 
             BindingContext = new HomeViewModel();
         }
+
+        void OnTapGestureRecognizerTapped(object sender, EventArgs args)
+        {
+
+        }
     }
 }

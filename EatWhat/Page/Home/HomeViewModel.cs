@@ -27,5 +27,7 @@ namespace EatWhat.Page.Home
                 Console.WriteLine(e.Message);
             }
         }
+
+
     }
 }

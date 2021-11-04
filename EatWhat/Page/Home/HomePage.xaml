@@ -3,13 +3,45 @@
     x:Class="EatWhat.Page.Home.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <ContentPage.Content>
-        <Grid Padding="20">
-            <Label
-                FontSize="Large"
-                HorizontalOptions="Center"
-                Text="Welcome"
-                VerticalOptions="Center" />
+    <StackLayout>
+
+        <Grid BackgroundColor="SkyBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Margin="30,10,30,0" 
+                   Grid.Row="1"
+                   Source="https://img.ixintu.com/download/jpg/20200726/e3fd335d05f959d96b09397d76309185_512_512.jpg!bg"
+                   />
+            <Image Grid.Column="2"
+                Source="https://cdn4.iconfinder.com/data/icons/forgen-phone-settings/48/setting-512.png" HorizontalOptions="End" Margin="0,10,10,0" />
+            <Label Grid.Column="1" 
+                   Grid.Row="1"
+                Text="Chan Tai Man" Padding="20,70,0,0" FontSize = "20" TextColor="Black"/>
+            <Label Grid.Column="1" 
+                   Grid.Row="1"
+                   Text="Hong Kong" Padding="20,100,0,0" FontSize = "15" TextColor="Black"/>
+
         </Grid>
-    </ContentPage.Content>
+        <Frame>
+            <Label Text="Choose Location" HorizontalOptions="Fill" Margin="20,0,0,0" IsTabStop="False" TextColor="#000000" VerticalOptions="End" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Frame>
+        <Frame>
+            <Label Text="Change Password" HorizontalOptions="Fill" Margin="20,0,0,0" IsTabStop="False" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Frame>
+    </StackLayout>
 </ContentPage>
