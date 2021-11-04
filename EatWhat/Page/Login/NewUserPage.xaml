@@ -17,7 +17,7 @@
                 Text="{Binding Password}" />
 
             <Button
-                Command="{Binding SignUpCommand}"
+                Command="{Binding RegisterCommand}"
                 Style="{StaticResource PrimaryButton}"
                 Text="Sign Up" />
 
