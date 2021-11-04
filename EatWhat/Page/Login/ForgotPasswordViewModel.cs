@@ -13,6 +13,7 @@ namespace EatWhat.Page.Login
         public ForgotPasswordViewModel()
         {
             ResetPasswordCommand = new Command(OnResetPassword);
+            SignUpCommand = new Command(SignUp);
         }
 
         private async void OnResetPassword(object obj)
@@ -44,6 +45,14 @@ namespace EatWhat.Page.Login
             set => SetProperty(ref email, value);
         }
 
+        private async void SignUp()
+        {
+            await Xamarin.Forms.Shell.Current.GoToAsync("//LoginPage");
+        }
+
         public ICommand ResetPasswordCommand { get; }
+        public ICommand SignUpCommand { get; }
+
+
     }
 }

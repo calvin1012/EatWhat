@@ -14,10 +14,11 @@ namespace EatWhat.Page.Login
 
         public NewUserViewModel()
         {
+            RegisterCommand = new Command(Register);
             SignUpCommand = new Command(OnSignUp);
         }
 
-        private async void OnSignUp()
+        private async void Register()
         {
             try
             {
@@ -38,6 +39,11 @@ namespace EatWhat.Page.Login
                 await Xamarin.Forms.Shell.Current
                     .DisplayAlert("Create User", "An error occurs", "OK");
             }
+        }
+
+        private async void OnSignUp()
+        {
+            await Xamarin.Forms.Shell.Current.GoToAsync("//LoginPage");
         }
 
         #region Properties
@@ -61,5 +67,6 @@ namespace EatWhat.Page.Login
         #endregion
 
         public ICommand SignUpCommand { get; }
+        public ICommand RegisterCommand { get; }
     }
 }
